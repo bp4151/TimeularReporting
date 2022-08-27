@@ -1,4 +1,4 @@
-FROM python:3.11.0rc1-bullseye
+FROM python:3.11-rc-slim
 WORKDIR /code
 
 ENV API_KEY=${API_KEY}
