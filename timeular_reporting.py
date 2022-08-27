@@ -133,7 +133,7 @@ def main(_api_key: str, _api_secret: str):
         if name not in ['Break', 'Lunch', 'Meeting']:
             included_activity_ids.add(activity_id)
 
-    selected_entries = list(filter(lambda e: e['activityId'] in included_activity_ids, entries))
+    selected_entries = [e for e in entries if e['activityId'] not in included_activity_ids]
 
     unique_tags = set()
     notes = []
